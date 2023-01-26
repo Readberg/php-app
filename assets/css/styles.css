@@ -12,7 +12,7 @@ main {
 }
 
 form {
-    max-width: 500px;
+    width: 520px;
     display: flex;
     flex-direction: column;
 }
@@ -40,4 +40,5 @@ a {
 
 p {
     margin: 10px 0;
+    text-align: center;
 }
