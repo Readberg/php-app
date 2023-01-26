@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Авторизация и регистрация</title>
+    <title>Web app</title>
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -12,13 +12,13 @@
 <!-- Форма авторизации-->
 <main>
     <form action="" method="">
-        <label>Логин</label>
-        <input type="text" placeholder="Введите логин">
-        <label>Пароль</label>
-        <input type="password" placeholder="Введите пароль">
-        <button>Войти</button>
+        <label>Login</label>
+        <input type="text" placeholder="Enter your login">
+        <label>Password</label>
+        <input type="password" placeholder="Enter your password">
+        <button>Log in</button>
         <p>
-            Нет аккаунта? - <a href="/register.php">зарегистрироваться</a>
+            Don't have an account? - <a href="/register.php">Sign in</a>
         </p>
     </form>
 </main>
