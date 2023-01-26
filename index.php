@@ -6,12 +6,26 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
+<header>
 
+</header>
 <!-- Форма авторизации-->
+<main>
+    <form action="" method="">
+        <label>Логин</label>
+        <input type="text" placeholder="Введите логин">
+        <label>Пароль</label>
+        <input type="password" placeholder="Введите пароль">
+        <button>Войти</button>
+        <p>
+            Нет аккаунта? - <a href="#">зарегистрироваться</a>
+        </p>
+    </form>
+</main>
 
-<form action="" method="">
-    <label>Логин</label>
-</form>
+<footer>
+
+</footer>
 
 </body>
 </html>
