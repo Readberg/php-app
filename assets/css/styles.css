@@ -42,3 +42,7 @@ p {
     margin: 10px 0;
     text-align: center;
 }
+
+.password_correct {
+    color: red;
+}

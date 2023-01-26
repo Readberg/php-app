@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -18,7 +22,7 @@
         <input type="password" placeholder="Enter your password">
         <button>Log in</button>
         <p>
-            Don't have an account? - <a href="/register.php">Sign in</a>
+            Don't have an account? - <a href="/register.php">Sign up</a>
         </p>
     </form>
 </main>

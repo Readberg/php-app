@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -11,18 +15,23 @@
 </header>
 <!-- Форма авторизации-->
 <main>
-    <form action="" method="">
+    <form action="vendor/signup.php" method="post">
         <label>Login</label>
-        <input type="text" placeholder="Enter login">
+        <input type="text" name="login" placeholder="Enter login">
         <label>Password</label>
-        <input type="password" placeholder="Enter password">
-        <label>Confirm password</label>
-        <input type="password" placeholder="Enter password again">
+        <input type="password" name="password" placeholder="Enter password">
+        <label>Confirm password<span class="password_correct">
+                <?php
+                    echo $_SESSION['passwordCorrect'];
+                    unset($_SESSION['passwordCorrect']);
+                ?>
+            </span></label>
+        <input type="password" name="password_confirm" placeholder="Enter password again">
         <label>Email</label>
-        <input type="email" placeholder="Enter Email">
+        <input type="email" name="email" placeholder="Enter Email">
         <label>Name</label>
-        <input type="text" placeholder="Enter your name">
-        <button>Sign in</button>
+        <input type="text" name="name" placeholder="Enter your name">
+        <button>Sign up</button>
         <p>
             Have an account? - <a href="/">Login</a>
         </p>
@@ -34,4 +43,5 @@
 </footer>
 
 </body>
+
 </html>
