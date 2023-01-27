@@ -1,1 +1,10 @@
-{"login":"Roman","password":"111","email":"wayreadberg@gmail.com","name":"Roman"}
+[
+    {
+        "username": "Roman",
+        "password": "$2y$10$FP6BwtSX66RTKTOHOBCX1epRO11Y0QJfLTtmqR0ZULeWTMG6DELTS"
+    },
+    {
+        "username": "Readberg",
+        "password": "$2y$10$cJpi8JnxJ8qNLJ4tZMVoqORmTPufeWcGUK72h26rXBXhBQru50OLq"
+    }
+]
