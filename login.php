@@ -24,13 +24,16 @@
 		<label>Password</label>
 		<input type="text" name="password">
 
-		<button type="submit" name="submit">Log in</button>
+		<button type="submit" name="submit" class="loginBtn">Log in</button>
 
         <p class="link">Don't have an account? - <a href="/index.php">Registration</a></p>
 
         <p class="error"><?php echo @$user->error ?></p>
 		<p class="success"><?php echo @$user->success ?></p>
 	</form>
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="assets/js/main.js"></script>
 
 </body>
 </html>

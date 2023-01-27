@@ -1,19 +1,17 @@
 <?php
 session_start();
 class RegisterUser{
-	// Class properties
 	private $username;
 	private $raw_password;
 	private $encrypted_password;
-    private $confirmPassword;
+    private $email;
 	public $error;
 	public $success;
 	private $storage = "data.json";
 	private $stored_users;
-	private $new_user; // array 
+	private $new_user;
 
-
-	public function __construct($username, $password){
+	public function __construct($username, $password, $email){
 
 		$this->username = trim($this->username);
 		$this->username = filter_var($username, FILTER_SANITIZE_STRING);
@@ -21,18 +19,20 @@ class RegisterUser{
 		$this->raw_password = filter_var(trim($password), FILTER_SANITIZE_STRING);
 		$this->encrypted_password = password_hash($this->raw_password, PASSWORD_DEFAULT);
 
+        $this->email = filter_var($email, FILTER_SANITIZE_STRING);
+
 		$this->stored_users = json_decode(file_get_contents($this->storage), true);
 
 		$this->new_user = [
 			"username" => $this->username,
 			"password" => $this->encrypted_password,
+            "email" => $this->email,
 		];
 
 		if($this->checkFieldValues()){
 			$this->insertUser();
 		}
 	}
-
 
 	private function checkFieldValues(){
 		if(empty($this->username) || empty($this->raw_password)){
@@ -42,7 +42,6 @@ class RegisterUser{
 			return true;
 		};
 	}
-
 
 	private function usernameExists(){
 		foreach($this->stored_users as $user){
@@ -54,9 +53,18 @@ class RegisterUser{
 		return false;
 	}
 
+    private function emailExists(){
+        foreach($this->stored_users as $user){
+            if($this->email == $user['email']){
+                $this->error = "Email already taken, please choose a different one.";
+                return true;
+            }
+        }
+        return false;
+    }
 
 	private function insertUser(){
-		if($this->usernameExists() == FALSE){
+		if($this->usernameExists() == FALSE && $this->emailExists() == FALSE){
 			array_push($this->stored_users, $this->new_user);
 			if(file_put_contents($this->storage, json_encode($this->stored_users, JSON_PRETTY_PRINT))){
 				return $this->success = "Your registration was successful";
@@ -66,6 +74,4 @@ class RegisterUser{
 		}
 	}
 
-
-
-} // end of class
+}

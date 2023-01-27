@@ -6,7 +6,7 @@ require("register.class.php") ?>
         $_SESSION['error'] = ' *Passwords do not match';
     } else {
         if(isset($_POST['submit'])){
-            $user = new RegisterUser($_POST['username'], $_POST['password']);
+            $user = new RegisterUser($_POST['username'], $_POST['password'], $_POST['email']);
         }
     }
 ?>
@@ -41,6 +41,9 @@ require("register.class.php") ?>
             </label>
 
         <input type="text" name="confirmPassword" placeholder="Enter password again">
+
+        <label>Email</label>
+        <input type="text" name="email" placeholder="Enter email">
 
 		<button type="submit" name="submit">Register</button>
         <p class="link">Already have an account? - <a href="/login.php">Log in</a></p>
