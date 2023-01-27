@@ -30,7 +30,7 @@ body{
 }
 
 .form h4{
-	margin-bottom: 40px;
+	margin-bottom: 30px;
 	font-weight: normal;
 }
 .form h4 span{
@@ -40,7 +40,7 @@ body{
 }
 .form label{
 	display: block;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 	padding-left: 5px;
 }
 
@@ -50,7 +50,7 @@ body{
 	padding: 10px;
 	font-size: 16px;
 	border:  thin solid #e4e4e4;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 }
 
 .form select{

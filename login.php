@@ -32,8 +32,5 @@
 		<p class="success"><?php echo @$user->success ?></p>
 	</form>
 
-    <script src="node_modules/jquery/dist/jquery.js"></script>
-    <script src="assets/js/main.js"></script>
-
 </body>
 </html>
