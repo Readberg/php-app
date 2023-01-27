@@ -3,6 +3,10 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+a {
+	text-decoration: none;
+	color: #32749a;
+}
 
 body{
 	font-family: sans-serif;
@@ -11,7 +15,7 @@ body{
 	background-color: coral;
 }
 
-form, .content{
+.form, .content{
 	max-width: 400px;
 	min-height: 500px;
 	margin: 100px auto;
@@ -21,36 +25,35 @@ form, .content{
 	background-color: white;
 }
 
-form h2{
+.form h2{
 	margin-bottom: 10px;
 }
 
-form h4{
+.form h4{
 	margin-bottom: 40px;
 	font-weight: normal;
 }
-form h4 span{
+.form h4 span{
 	color:  coral;
 	font-weight: bold;
 	text-decoration: underline;
 }
-form label{
+.form label{
 	display: block;
 	margin-bottom: 10px;
 	padding-left: 5px;
 }
 
-form input, form textarea{
+.form input, form textarea{
 	display: block;
 	width:  100%;
 	padding: 10px;
-	margin-bottom: 10px;
 	font-size: 16px;
 	border:  thin solid #e4e4e4;
 	margin-bottom: 30px;
 }
 
-form select{
+.form select{
 	display: block;
 	width:  100%;
 	margin-bottom: 10px;
@@ -61,21 +64,21 @@ form select{
 	color: #555;
 }
 
-form input:focus
+.form input:focus
 {
 	outline: none;
 	border: thin solid coral;
 }
 
-form textarea{
+.form textarea{
 	min-height: 150px;
 }
 
-form input::placeholder{
+.form input::placeholder{
 	font-size: 16px;
 }
 
-form button{
+.form button{
 	background: #32749a;
 	color: white;
 	border: none;
@@ -86,8 +89,12 @@ form button{
 	cursor: pointer;
 }
 
-form button:active{
+.form button:active{
 	background-color: green;
+}
+
+.link {
+	margin-top: 30px;
 }
 
 .error{
@@ -125,3 +132,4 @@ form button:active{
 .content main h3{
 
 }
+

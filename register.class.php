@@ -1,9 +1,11 @@
-<?php 
+<?php
+session_start();
 class RegisterUser{
 	// Class properties
 	private $username;
 	private $raw_password;
 	private $encrypted_password;
+    private $confirmPassword;
 	public $error;
 	public $success;
 	private $storage = "data.json";
@@ -38,7 +40,7 @@ class RegisterUser{
 			return false;
 		}else{
 			return true;
-		}
+		};
 	}
 
 

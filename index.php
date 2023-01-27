@@ -1,9 +1,15 @@
-<?php require("register.class.php") ?>
 <?php
-	if(isset($_POST['submit'])){
-		$user = new RegisterUser($_POST['username'], $_POST['password']);
-        header('Location: /login.php');
-	}
+session_start();
+require("register.class.php") ?>
+<?php
+    if($_POST['password'] !== $_POST['confirmPassword']) {
+        $_SESSION['error'] = ' *Passwords do not match';
+    } else {
+        if(isset($_POST['submit'])){
+            $user = new RegisterUser($_POST['username'], $_POST['password']);
+        }
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -16,17 +22,29 @@
 </head>
 <body>
 
-	<form action="" method="post" enctype="multipart/form-data" autocomplete="off">
+	<form class="form" action="" method="post" enctype="multipart/form-data" autocomplete="off">
 		<h2>Register form</h2>
-		<h4>Both fields are <span>required</span></h4>
+		<h4>All fields are <span>required</span></h4>
 
-		<label>Username</label>
-		<input type="text" name="username">
+		<label>Login</label>
+		<input type="text" name="username" placeholder="Enter login">
 
 		<label>Password</label>
-		<input type="text" name="password">
+		<input type="text" name="password" placeholder="Enter password">
+
+        <label>Confirm password
+            <?php
+            if ($_SESSION['error']){
+                echo '<span style="color: #af0c0c;">' . $_SESSION['error'] . '</span>';
+            }
+            unset($_SESSION['error']);
+            ?>
+            </label>
+
+        <input type="text" name="confirmPassword" placeholder="Enter password again">
 
 		<button type="submit" name="submit">Register</button>
+        <p class="link">Already have an account? - <a href="/login.php">Log in</a></p>
 
 		<p class="error"><?php echo @$user->error ?></p>
 		<p class="success"><?php echo @$user->success ?></p>
