@@ -1,0 +1,78 @@
+@import "reset.css";
+
+:root{
+    --input-color: #EEEEEE;
+    --text-color: #555555;
+    --btn-color: #1E2772;
+}
+
+h1 {
+    font-weight: 600;
+}
+
+.body{
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+.main {
+    display: flex;
+    margin: 0 auto;
+    padding: 80px 120px;
+}
+
+.registration-section{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    align-items: center;
+}
+.info-img {
+    height: auto;
+    width: 140px;
+}
+
+.signup-form {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 80px;
+    row-gap: 37px;
+}
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.form-input {
+    width: 360px;
+    height: 51px;
+    background-color: var(--input-color);
+    border-radius: 8px;
+    border: none;
+    padding: 15px 23px;
+    outline:none;
+}
+
+.signup-btn {
+    height: 50px;
+    width: 214px;
+    margin-top: 30px;
+    background-color: var(--btn-color);
+    color: #ffffff;
+    border-radius: 8px;
+}
+
+.company-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
