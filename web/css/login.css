@@ -1,0 +1,23 @@
+.login-company {
+    padding: 0 200px;
+    width: 100%;
+}
+.company-link img{
+    width: 600px;
+}
+.login-section {
+    width: 35%;
+    box-shadow: -28px 0px 50.4863px rgba(0, 0, 0, 0.05);
+    padding: 140px 27px;
+    gap: 80px;
+}
+
+.login-form {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    column-gap: 80px;
+    row-gap: 37px;
+}
+#custom-input {
+    width: 420px;
+}

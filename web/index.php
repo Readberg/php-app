@@ -12,11 +12,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Registration Page</title>
 </head>
 <body class="body">
     <main class="main">
-        <section class="registration-section">
+        <section class="registration-section section">
             <div class="information">
                 <img class="info-img" src="./assets/images/manao-icon.png" alt="Manao team logo"/>
                 <h1>Sign up into your account</h1>
@@ -45,6 +45,7 @@
                     </div>
                 </form>
                 <button class="signup-btn btn">Sign up</button>
+                <p>Already have an account? <a class="link" href="./login.php">Log in</a></p>
             </div>
         </section>
         <section class="company-section">
