@@ -7,8 +7,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
         let error = formValidate(form);
 
-        if(error === 0) {
+        let formData = new FormData();
 
+        if(error === 0) {
+            form.classList.add('_sending');
+            let response = await fetch('registration.php', {
+                method: 'POST',
+                body: formData
+            });
+            if (response.ok) {
+                let result = await response.json();
+                alert(result.message);
+                form.reset();
+                form.classList.remove('_sending');
+            } else {
+                alert('Error');
+                form.classList.remove('_sending');
+            }
         } else {
             alert('Fill in all the fields!')
         }
