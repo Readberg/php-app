@@ -13,3 +13,6 @@
     column-gap: 80px;
     row-gap: 37px;
 }
+.form-section {
+    position: relative;
+}

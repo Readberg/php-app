@@ -93,7 +93,7 @@ h1 {
 }
 
 .signup-btn {
-    height: 50px;
+    height: 51px;
     width: 214px;
     margin: 30px 0;
     background-color: var(--btn-color);
@@ -115,3 +115,10 @@ h1 {
     justify-content: flex-end;
 }
 
+.labelError {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    color: red;
+    font-size: 10px;
+}

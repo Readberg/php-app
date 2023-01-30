@@ -22,25 +22,30 @@
                 <h1>Sign up into your account</h1>
             </div>
             <div>
-                <form class="signup-form form" id="form" method="post" enctype="multipart/form-data" autocomplete="off">
+                <form action="" class="signup-form form" id="form" method="post" enctype="multipart/form-data" autocomplete="off">
                     <label class="form-section">Login
                         <input type="text" class="login form-input _req" name="login" placeholder="Enter your login.." >
+                        <span class="loginError labelError"></span>
                     </label>
 
                     <label class="form-section">Email
                         <input type="email" class="email form-input _req" name="email" placeholder="example@gmail.com">
+                        <span class="emailError labelError"></span>
                     </label>
 
                     <label class="form-section">Password
                         <input type="password" class="password form-input _req" name="password" placeholder="xxxxxxxxxx">
+                        <span class="passwordError labelError"></span>
                     </label>
 
                     <label class="form-section">Confirm password
-                        <input type="password" class="form-input _req" name="confirmPassword" placeholder="xxxxxxxxxx">
+                        <input type="password" class="confirmPassword form-input _req" name="confirmPassword" placeholder="xxxxxxxxxx">
+                        <span class="confirmError labelError"></span>
                     </label>
 
                     <label class="form-section">Name
                         <input type="text" class="name form-input _req" name="name" placeholder="Enter your name..">
+                        <span class="nameError labelError"></span>
                     </label>
                     <button class="signup-btn btn">Sign up</button>
                 </form>
@@ -52,6 +57,7 @@
         </section>
     </main>
 
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="./js/script.js"></script>
 </body>
 </html>
