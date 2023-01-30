@@ -22,29 +22,28 @@
                 <h1>Sign up into your account</h1>
             </div>
             <div>
-                <form class="signup-form form" method="post" enctype="multipart/form-data" autocomplete="off">
-                    <div class="form-section">
-                        <label>Login</label>
-                        <input type="text" class="login form-input" name="login" placeholder="Enter your login..">
-                    </div>
-                    <div class="form-section">
-                        <label>Email</label>
-                        <input type="email" class="email form-input" name="email" placeholder="example@gmail.com">
-                    </div>
-                    <div class="form-section">
-                        <label>Password</label>
-                        <input type="password" class="password form-input" name="password" placeholder="xxxxxxxxxx">
-                    </div>
-                    <div class="form-section">
-                        <label>Confirm password</label>
-                        <input type="password" class="form-input" name="confirmPassword" placeholder="xxxxxxxxxx">
-                    </div>
-                    <div class="form-section">
-                        <label>Name</label>
-                        <input type="text" class="name form-input" name="name" placeholder="Enter your name..">
-                    </div>
+                <form class="signup-form form" id="form" method="post" enctype="multipart/form-data" autocomplete="off">
+                    <label class="form-section">Login
+                        <input type="text" class="login form-input _req" name="login" placeholder="Enter your login.." >
+                    </label>
+
+                    <label class="form-section">Email
+                        <input type="email" class="email form-input _req" name="email" placeholder="example@gmail.com">
+                    </label>
+
+                    <label class="form-section">Password
+                        <input type="password" class="password form-input _req" name="password" placeholder="xxxxxxxxxx">
+                    </label>
+
+                    <label class="form-section">Confirm password
+                        <input type="password" class="form-input _req" name="confirmPassword" placeholder="xxxxxxxxxx">
+                    </label>
+
+                    <label class="form-section">Name
+                        <input type="text" class="name form-input _req" name="name" placeholder="Enter your name..">
+                    </label>
+                    <button class="signup-btn btn">Sign up</button>
                 </form>
-                <button class="signup-btn btn">Sign up</button>
                 <p>Already have an account? <a class="link" href="./login.php">Log in</a></p>
             </div>
         </section>
@@ -52,5 +51,7 @@
             <a href="https://manao-team.com/" class="company-link"><img src="https://manao-team.com/local/templates/manao-dev/images/bg/bg-about.svg" alt="Manao team image" /></a>
         </section>
     </main>
+
+    <script src="./js/script.js"></script>
 </body>
 </html>
