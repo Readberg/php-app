@@ -1,9 +1,4 @@
 <?php require("main/classes/register.class.php") ?>
-<?php
-	if(isset($_POST['submit'])){
-		$user = new RegisterUser($_POST['login'], $_POST['password'], $_POST['name'], $_POST['email']);
-	}
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -49,11 +44,17 @@
             <p>Already have an account? <a class="link" href="login.php">Log in</a></p>
             <p class="error"><?php echo @$user->error ?></p>
             <p class="success"><?php echo @$user->success ?></p>
+            <p id="test"></p>
         </div>
     </section>
     <section class="company-section">
         <a href="https://manao-team.com/" class="company-link"><img src="https://manao-team.com/local/templates/manao-dev/images/bg/bg-about.svg" alt="Manao team image" /></a>
     </section>
 </main>
+
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+        crossorigin="anonymous"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>

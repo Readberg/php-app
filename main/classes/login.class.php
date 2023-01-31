@@ -1,4 +1,5 @@
-<?php 
+<?php
+$user = new LoginUser($_POST['login'], $_POST['password']);
 class LoginUser{
 	// class properties
 	private $login;
@@ -16,7 +17,7 @@ class LoginUser{
 		$this->login();
 	}
 
-
+    // Проверка с последующей авторизацией
 	private function login(){
 		foreach ($this->stored_users as $user) {
 			if($user['login'] == $this->login){
